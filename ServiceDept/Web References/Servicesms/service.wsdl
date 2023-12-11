@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="SMSCountry WebService" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="SMSCountry WebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="SMSCountry WebService">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SendTextSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTextSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTextSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendUnicodeSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendUnicodeSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendUnicodeSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPictureSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPictureSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendPictureSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBinarySMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendBinarySMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendBinarySMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendRingTone">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendRingToneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendRingToneResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendLOGO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendLOGOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendLOGOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendWapPush">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WapUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendWapPushResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendWapPushResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFlashSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobilenumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SenderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFlashSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendFlashSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getbalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetbalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetbalanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeliveryReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SMS_Job_No" type="s:unsignedLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeliveryReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeliveryReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMultiSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MNO_MSG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mtype" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dr" type="s1:char" />
+            <s:element minOccurs="0" maxOccurs="1" name="wapurl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendMultiSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendMultiSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendTextSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTextSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendTextSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTextSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendUnicodeSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendUnicodeSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendUnicodeSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendUnicodeSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPictureSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPictureSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendPictureSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPictureSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendBinarySMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendBinarySMS" />
+  </wsdl:message>
+  <wsdl:message name="SendBinarySMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendBinarySMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendRingToneSoapIn">
+    <wsdl:part name="parameters" element="tns:SendRingTone" />
+  </wsdl:message>
+  <wsdl:message name="SendRingToneSoapOut">
+    <wsdl:part name="parameters" element="tns:SendRingToneResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendLOGOSoapIn">
+    <wsdl:part name="parameters" element="tns:SendLOGO" />
+  </wsdl:message>
+  <wsdl:message name="SendLOGOSoapOut">
+    <wsdl:part name="parameters" element="tns:SendLOGOResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushSoapIn">
+    <wsdl:part name="parameters" element="tns:SendWapPush" />
+  </wsdl:message>
+  <wsdl:message name="SendWapPushSoapOut">
+    <wsdl:part name="parameters" element="tns:SendWapPushResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendFlashSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendFlashSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendFlashSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendFlashSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetbalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:Getbalance" />
+  </wsdl:message>
+  <wsdl:message name="GetbalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetbalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDeliveryReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeliveryReport" />
+  </wsdl:message>
+  <wsdl:message name="GetDeliveryReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeliveryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendMultiSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:sendMultiSMS" />
+  </wsdl:message>
+  <wsdl:message name="sendMultiSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:sendMultiSMSResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="SendTextSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To Send Text SMS</wsdl:documentation>
+      <wsdl:input message="tns:SendTextSMSSoapIn" />
+      <wsdl:output message="tns:SendTextSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUnicodeSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To Send Language SMS with out any coversion</wsdl:documentation>
+      <wsdl:input message="tns:SendUnicodeSMSSoapIn" />
+      <wsdl:output message="tns:SendUnicodeSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPictureSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send Picture SMS in HEX format</wsdl:documentation>
+      <wsdl:input message="tns:SendPictureSMSSoapIn" />
+      <wsdl:output message="tns:SendPictureSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendBinarySMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send Binary SMS in HEX Format</wsdl:documentation>
+      <wsdl:input message="tns:SendBinarySMSSoapIn" />
+      <wsdl:output message="tns:SendBinarySMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendRingTone">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send RingTone in HEX Format</wsdl:documentation>
+      <wsdl:input message="tns:SendRingToneSoapIn" />
+      <wsdl:output message="tns:SendRingToneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendLOGO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send LOGO in HEX Format</wsdl:documentation>
+      <wsdl:input message="tns:SendLOGOSoapIn" />
+      <wsdl:output message="tns:SendLOGOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWapPush">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send WAP PUSH with some text and the Wap URL</wsdl:documentation>
+      <wsdl:input message="tns:SendWapPushSoapIn" />
+      <wsdl:output message="tns:SendWapPushSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendFlashSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send Flash SMS</wsdl:documentation>
+      <wsdl:input message="tns:SendFlashSMSSoapIn" />
+      <wsdl:output message="tns:SendFlashSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getbalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Know Balance SMS Credits In Your Account</wsdl:documentation>
+      <wsdl:input message="tns:GetbalanceSoapIn" />
+      <wsdl:output message="tns:GetbalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Delivery Reports by giving Job Numbers</wsdl:documentation>
+      <wsdl:input message="tns:GetDeliveryReportSoapIn" />
+      <wsdl:output message="tns:GetDeliveryReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">To Send Multiple Customized SMS</wsdl:documentation>
+      <wsdl:input message="tns:sendMultiSMSSoapIn" />
+      <wsdl:output message="tns:sendMultiSMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendTextSMS">
+      <soap:operation soapAction="SMSCountry WebService/SendTextSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUnicodeSMS">
+      <soap:operation soapAction="SMSCountry WebService/SendUnicodeSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPictureSMS">
+      <soap:operation soapAction="SMSCountry WebService/SendPictureSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBinarySMS">
+      <soap:operation soapAction="SMSCountry WebService/SendBinarySMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRingTone">
+      <soap:operation soapAction="SMSCountry WebService/SendRingTone" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendLOGO">
+      <soap:operation soapAction="SMSCountry WebService/SendLOGO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWapPush">
+      <soap:operation soapAction="SMSCountry WebService/SendWapPush" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFlashSMS">
+      <soap:operation soapAction="SMSCountry WebService/SendFlashSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbalance">
+      <soap:operation soapAction="SMSCountry WebService/Getbalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryReport">
+      <soap:operation soapAction="SMSCountry WebService/GetDeliveryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiSMS">
+      <soap:operation soapAction="SMSCountry WebService/sendMultiSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendTextSMS">
+      <soap12:operation soapAction="SMSCountry WebService/SendTextSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUnicodeSMS">
+      <soap12:operation soapAction="SMSCountry WebService/SendUnicodeSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPictureSMS">
+      <soap12:operation soapAction="SMSCountry WebService/SendPictureSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendBinarySMS">
+      <soap12:operation soapAction="SMSCountry WebService/SendBinarySMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendRingTone">
+      <soap12:operation soapAction="SMSCountry WebService/SendRingTone" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendLOGO">
+      <soap12:operation soapAction="SMSCountry WebService/SendLOGO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWapPush">
+      <soap12:operation soapAction="SMSCountry WebService/SendWapPush" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendFlashSMS">
+      <soap12:operation soapAction="SMSCountry WebService/SendFlashSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getbalance">
+      <soap12:operation soapAction="SMSCountry WebService/Getbalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryReport">
+      <soap12:operation soapAction="SMSCountry WebService/GetDeliveryReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMultiSMS">
+      <soap12:operation soapAction="SMSCountry WebService/sendMultiSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://www.smscountry.com/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://www.smscountry.com/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

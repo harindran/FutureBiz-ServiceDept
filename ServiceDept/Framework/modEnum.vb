@@ -1,0 +1,3 @@
+Module modEnum
+
+End Module
